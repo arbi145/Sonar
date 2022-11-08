@@ -45,6 +45,14 @@ public class Facture implements Serializable {
     private Set<Reglement> reglements;
     
     
+	public Facture() {
+		super();
+	}
+	public Facture(Fournisseur fournisseur) {
+		super();
+		this.fournisseur = fournisseur;
+	}
+	
 	public Long getIdFacture() {
 		return idFacture;
 	}
