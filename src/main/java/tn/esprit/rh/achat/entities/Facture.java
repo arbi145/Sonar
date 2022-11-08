@@ -20,8 +20,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Facture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -43,6 +43,16 @@ public class Facture implements Serializable {
     @OneToMany(mappedBy="facture")
     @JsonIgnore
     private Set<Reglement> reglements;
+    
+    
+	public Facture() {
+		
+	}
+	public Facture(Fournisseur fournisseur) {
+		super();
+		this.fournisseur = fournisseur;
+	}
+	
 	public Long getIdFacture() {
 		return idFacture;
 	}
