@@ -40,7 +40,14 @@ public class Facture implements Serializable {
     @ManyToOne
     @JsonIgnore
     private Fournisseur fournisseur;
-    @OneToMany(mappedBy="facture")
+    
+    
+    
+    
+	public Facture() {
+		super();
+	}
+	@OneToMany(mappedBy="facture")
     @JsonIgnore
     private Set<Reglement> reglements;
 	public Long getIdFacture() {
