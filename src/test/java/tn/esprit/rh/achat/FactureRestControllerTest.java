@@ -10,10 +10,12 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -23,11 +25,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import tn.esprit.rh.achat.controllers.FactureRestController;
 import tn.esprit.rh.achat.entities.Facture;
+import tn.esprit.rh.achat.entities.Fournisseur;
 import tn.esprit.rh.achat.services.IFactureService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(FactureRestController.class)
-
+@ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 public class FactureRestControllerTest {
 	
@@ -42,22 +45,19 @@ public class FactureRestControllerTest {
 	private Facture facture;
 	   
 	   
-	// @Test
-	// public void  InsertFactures() throws Exception {
-//		// factureService.retrieveAllFactures();
-//		 //System.out.println("jjjj");
-		 
-//		 Facture facture2 = new Facture(5,6);
-//		 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
+	 @Test
+	 public void  InsertFactures() throws Exception {
+	 factureService.retrieveAllFactures();
+		 System.out.println("jjjj");
+		 Fournisseur f1  = new Fournisseur();
+		 Facture facture2 = new Facture(f1);
+		 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
 	       
-	//    }
+	    }
 	
 	 @Test
 	 public void create()  {
-		 
-		
-		
-		 
+
 	     Facture f = new Facture();
 	     f.setMontantFacture(5);
 		 when(factureService.addFacture(f)).thenReturn(f);
