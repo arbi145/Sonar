@@ -20,8 +20,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class Facture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -46,7 +46,7 @@ public class Facture implements Serializable {
     
     
 	public Facture() {
-		
+		super();
 	}
 	public Facture(Fournisseur fournisseur) {
 		super();
