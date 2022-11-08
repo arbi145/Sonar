@@ -24,7 +24,7 @@ public class StockServiceImpl implements IStockService {
 		//log.info("In method retrieveAllStocks");
 		List<Stock> stocks = (List<Stock>) stockRepository.findAll();
 		for (Stock stock : stocks) {
-		//	log.info(" Stock : " + stock);
+			//log.info(" Stock : " + stock);
 		}
 		//log.info("out of method retrieveAllStocks");
 		// récuperer la date à l'instant t2
