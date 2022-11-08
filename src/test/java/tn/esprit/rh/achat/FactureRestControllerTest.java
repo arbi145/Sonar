@@ -45,15 +45,15 @@ public class FactureRestControllerTest {
 	private Facture facture;
 	   
 	   
-	 @Test
-	 public void  InsertFactures() throws Exception {
-	 factureService.retrieveAllFactures();
-		 System.out.println("jjjj");
-		 Fournisseur f1  = new Fournisseur();
-		 Facture facture2 = new Facture(f1);
-		 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
+	// @Test
+	// public void  InsertFactures() throws Exception {
+	// factureService.retrieveAllFactures();
+	//	 System.out.println("jjjj");
+	//	 Fournisseur f1  = new Fournisseur();
+	//	 Facture facture2 = new Facture(f1);
+	//	 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
 	       
-	    }
+	 //   }
 	
 	 @Test
 	 public void create()  {
