@@ -42,15 +42,15 @@ public class FactureRestControllerTest {
 	private Facture facture;
 	   
 	   
-	// @Test
-	// public void  InsertFactures() throws Exception {
-//		// factureService.retrieveAllFactures();
-//		 //System.out.println("jjjj");
+	 @Test
+	 public void  InsertFactures() throws Exception {
+	 factureService.retrieveAllFactures();
+		 System.out.println("jjjj");
 		 
-//		 Facture facture2 = new Facture(5,6);
-//		 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
+		 Facture facture2 = new Facture();
+		 Mockito.when(facture2.getFournisseur().equals(null)).thenReturn(True);
 	       
-	//    }
+	    }
 	
 	 @Test
 	 public void create()  {
