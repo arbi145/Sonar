@@ -42,7 +42,7 @@ import tn.esprit.rh.achat.services.IFactureService;
 @ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 @Slf4j
-public class FactureTest {
+public class FactureRestControllerTest {
 	
 	//@InjectMocks
 	//private FactureRestController factureController = new FactureRestController();
